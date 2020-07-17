@@ -1,1 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+:root {
+    --main-font: 'Raleway', sans-serif;
+    --purple-color:  #aa26c1;
+    --blue-color:   #61d3e2;
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3)
+    --grey-color: #404040;
+
+}
+
+body {
+    background: linear-gradient(to bottom right, var(--purple-color), var(--blue-color));
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: var(--main-font);
+}
+
+#main-container {
+    background-color: white;
+    max-width: 120rem;
+    margin: 30px 30px;
+    padding: 30px;
+    box-shadow: var(--shadow-dark);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    color: var(--grey-color);
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.new-books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-btn {
+    background-color: var(--purple-color);
+    color: white;
+    padding: 1px 20px;
+    font-size: 3.5em;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background-color: var(--blue-color);
+    transition: ease-out .5s;
+}
+
+.add-book {
+    margin-top: 15px;
+    font-size: 0.8em;
+}
+
+/*** BOOKS ***/
+
+.table-bar {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-heading {
+    border-top: 2px solid var(--blue-color);
+    border-bottom: 2px solid var(--blue-color);
+    list-style-type: none;
+    text-align: center;
+}
+
+td, th {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.table-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: var(--grey-color);
+    font-weight: 700;
+}
+
+.books-listing {
+    border-collapse: collapse;
+}
+
+.books-table {
+    list-style-type: none;
+    text-align: center;
+}
+
+.toggle-button {
+    font-weight: 300;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    background-color: grey;
+    color: #F5F5F5;
+    outline: none;
+    cursor: pointer;
+}
+
+.material-icons {
+    color: grey;
+    cursor: pointer;
+}
+
+.material-icons:hover {
+    color: black;
+    transition: ease-in-out .3s;
+}
+
+/***POPUP***/
+
+.popup {
+    background-image: radial-gradient( circle 410px at 49.5% 99%,  rgba(250,208,196,1) 0%, rgba(255,209,255,1) 99.5% );
+    width: 50%;
+    margin: auto;
+    -webkit-box-shadow: 8px 8px 12px -9px rgba(130,130,130,1);
+    -moz-box-shadow: 8px 8px 12px -9px rgba(130,130,130,1);
+    box-shadow: 8px 8px 12px -9px rgba(130,130,130,1);
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    visibility: hidden;
+}
+
+.popup-form {
+    margin-top: 30px;
+    padding: 30px 30px;
+    color: var(--grey-color);
+    font-weight: bold;
+}
+
+.close-icon {
+    color: white;
+    background-color: var(--purple-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: absolute;
+    left: 95%;
+}
+
+.close-icon:hover {
+    background-color: var(--blue-color);
+}
+
+.title-input {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+.author-input {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+.pages-input {
+    width: 50%;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+.title-input:focus, .author-input:focus, .pages-input:focus {
+    border: 2px solid var(--purple-color);
+}
+
+.radio-input {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.label-read {
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+.label-notread {
+    margin-left: 5px;
+}
+
+.submit-input {
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 3px;
+    background: var(--purple-color);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-input:active {
+    background-color: #6e128a;
+}
